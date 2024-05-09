@@ -16,7 +16,7 @@ def visualize_directory(path, indent=''):
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Usage: python visualize_directory.py 'directory_path'")
+        print("Usage: python main.py 'directory_path'")
         sys.exit(1)
     
     directory_path = sys.argv[1]
