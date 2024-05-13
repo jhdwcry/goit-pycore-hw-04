@@ -5,8 +5,12 @@ def parse_input(user_input):
 
 def add_contact(args, contacts):
     name, phone = args
-    contacts[name] = phone
-    return "Contact added."
+    if name in contacts:
+        contacts[name] = phone
+        return f"Phone number updated for {name}"
+    else:
+        contacts[name] = phone
+        return "Contact added."
 
 def main():
     contacts = {}
@@ -24,6 +28,8 @@ def main():
             print(add_contact(args, contacts))
         elif command == 'all':
             print(contacts)
+        elif command == "change":
+            print(add_contact(args, contacts)) 
         else:
             print("Invalid command.")
 
